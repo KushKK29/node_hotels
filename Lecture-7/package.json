@@ -1,0 +1,17 @@
+{
+  "name": "lecture-7",
+  "version": "1.0.0",
+  "description": "IT is about the mongoose scheema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.7.2",
+    "nodemon": "^3.1.7"
+  }
+}
