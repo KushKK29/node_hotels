@@ -39,6 +39,8 @@ const app = express();
 const db = require("./db");
 const Person = require("./models/person");
 
+require('dotenv').config();
+
 const Menu = require("./models/menu");
 
 const bodyParser = require("body-parser");
@@ -149,4 +151,5 @@ app.use("/person", personRoutes);
 const menuRoutes = require("./routes/menuRoutes");
 app.use("/menu", menuRoutes);
 
-app.listen(5000);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);

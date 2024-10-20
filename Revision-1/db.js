@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
-var mongooseUrl = "mongodb://127.0.0.1:27017/mydatabase";
+require('dotenv').config();
+var mongooseUrl = process.env.DB_URL;
 
 // Set up MongoDB connection without deprecated options
 mongoose.connect(mongooseUrl);
@@ -20,13 +21,4 @@ db.on("disconnected", () => {
   console.log("MongoDB disconnected");
 });
 
-// Disconnect after 5 seconds (for demonstration)
-// setTimeout(() => {
-//   console.log("Disconnecting from MongoDB...");
-//   mongoose.disconnect();
-// }, 5000);
-
-
-
-// Export the db connection for use in other modules
 module.exports = db;
